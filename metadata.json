@@ -1,0 +1,7 @@
+{
+  "name": "Jean Yves DURO 2026 - SmartHub",
+  "description": "Quartier Général Numérique pour la campagne électorale de Jean Yves DURO (Sentann@vantou) à Sainte-Anne.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

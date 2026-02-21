@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Yves DURO 2026 - Sentann@vantou</title>
+    <link rel="icon" type="image/jpeg" href="/logosentannavantou.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- OneSignal SDK -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              campaign: {
+                navy: '#1E293B',
+                blue: '#2563EB',
+                teal: '#22D3EE',
+                orange: '#FF9500',
+                magenta: '#D946EF',
+                accent: '#FF9500', 
+              }
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+              inter: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'marquee': 'marquee 60s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(100%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body { 
+          font-family: 'Inter', sans-serif; 
+          scroll-behavior: smooth; 
+          background-color: #f9fafb;
+          position: relative;
+          min-height: 100vh;
+        }
+        
+        /* Filigrane Logo Sentann@vantou - Logo transparent exact */
+        body::before {
+          content: "";
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          width: 70vw;
+          height: 70vh;
+          transform: translate(-50%, -50%);
+          background-image: url('https://i.postimg.cc/3NB8tQNw/Design_sans_titre_(2).png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          opacity: 0.05;
+          z-index: -1;
+          pointer-events: none;
+        }
+
+        .gradient-logo-warm { background: linear-gradient(135deg, #FF9500 0%, #D946EF 100%); }
+        .gradient-hero { background: linear-gradient(135deg, #1E293B 0%, #2563EB 100%); }
+        .glass-card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px); }
+        .marquee-container { overflow: hidden; white-space: nowrap; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-slate-900">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
